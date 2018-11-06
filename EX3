@@ -1,0 +1,4 @@
+ a=randn(1,13);
+ b=randn(1,13);
+ c=complex(a,b);      %cream vectorul
+functia(c);           %apelam functia
