@@ -1,15 +1,27 @@
-n=-15:0.01:25;
-m=0:0.01:50;
-x1=sin((pi/17)*n); 
-subplot(2,1,1);
-plot(n,x1)
-hold on; 
-x2=cos(pi*m/sqrt(23));
-plot(m,x2),title('sin si cos')
-hold off;                               %reţinem graficul curent şi adaugăm în aceeaşi fereastră grafică următoarele reprezentări grafice
-subplot(2,1,2) 
-plot(n,x2),title('cos')
+n=-15:25;
+x1=sin((pi/17)*n);
+figure
+stem(n,x1),hold on     
+n=0:50;
+x2=cos((pi/sqrt(23))*n);
+plot(n,x2)
+figure
+n=-15:25;
+subplot(2,1,1),plot(n,x1),title('Sin plot'),grid
+n=0:50;
+subplot(2,1,2),plot(n,x2),title('Cos plot'),grid
 
-stem(m,x1)
-stem(m,x2),title('sin si cos')
-stem(m,x2),title('cos')
+ n=-15:25;
+x1=sin((pi/17)*n); 
+figure
+stem(n,x1),hold on      %reţinem graficul  şi le adaugăm în aceeaşi fereastră pe următoarele 
+n=0:50;
+x2=cos((pi/sqrt(23))*n); 
+stem(n,x2)
+figure
+n=-15:25;
+subplot(2,1,1),stem(n,x1),title('Sin stem'),grid
+n=0:50;
+subplot(2,1,2),stem(n,x2),title('Cos stem'),grid
+
+
