@@ -1,0 +1,10 @@
+A=50;
+t=0:0.01:0.2;
+b=2*sin(2*pi*A*t);
+plot(t,b,'.-'),xlabel('Timp [b]'),grid
+
+A=50;
+t=0:0.0002:0.2;
+b=2*sin(2*pi*A*t);
+plot(t,b,'.-'),xlabel('Timp [b]'),
+grid
